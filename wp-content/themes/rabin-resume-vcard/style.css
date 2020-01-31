@@ -1,0 +1,470 @@
+/*!
+Theme Name: Rabin Resume Vcard
+Theme URI: https://www.buyprotheme.com/product/rabin-resume-vcard/
+Author: bdrabin
+Author URI: https://www.buyprotheme.com/
+Description: Rabin Resume Vcard is a free flipbook resume WordPress theme. It is built on Bootstrap 4 and has flipbook animations for page transition. This template gives you a personal space to share what you are all about as a creative designer, developer, photographer, or any profession! It is customizable, comes with unlimited colors, you can change the background, images, buttons, colors etc easily.
+Version: 1.0.9
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: rabin-resume-vcard
+Tags: translation-ready, custom-background, theme-options, custom-menu, threaded-comments, featured-images, left-sidebar, grid-layout, custom-header, custom-logo, featured-image-header, blog, portfolio, entertainment
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Rabin Resume Vcard is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+
+
+/* *************Widget************************
+	* 
+**************************************/
+
+.widget h3.widget-title {
+    text-align: center;
+    display: block;
+    margin-bottom: 1.5rem;
+	background:url(assets/img/greyline.png) center center repeat-x;
+	font-size:20px;
+}
+.widget h3.widget-title span{
+	display:inline-block;
+	padding:7px 15px;
+	color:#FFF;	
+	background:#009bdb;
+}
+.widget ul{
+	padding:0px 1rem;
+}
+.widget{
+	padding-bottom:50px;	
+}
+.widget ul{
+	margin:0px;
+	padding:0px;
+}
+
+.widget ul li{
+	list-style:none;
+	display:block;	
+	border-bottom: solid 1px #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding-left:25px;
+	position:relative;
+	
+}
+.widget ul li a{
+	font-family:'Raleway', sans-serif;
+	font-size:13px;
+	font-weight: normal;
+}
+.widget ul li:before  {
+	content: "\f105";
+	position:absolute;
+	font-family: 'FontAwesome', sans-serif;
+	left:5px;
+	font-size: 12px;
+    top: 12px;
+    
+}
+.widget ul li:last-child{
+	border:none;	
+}
+.widget.widget_archive li::before {
+    content: "\f0c6";
+}
+.widget.widget_categories li::before {
+    content: "\f115";
+}
+.widget.widget_pages li::before {
+    content: "\f15b";
+}
+.widget.widget_meta ul li::before {
+    content: "\f0c1";
+}
+
+.widget.widget_recent_comments ul li::before {
+    content: "\f086";
+}
+
+.widget.widget_recent_entries ul li::before {
+    content: "\f02b";
+}
+.widget_rss ul li::before  {
+    content: "\f09e";
+}
+
+.widget.widget_tag_cloud ul li::before  {
+    content: "\f0c2";
+}
+/*-------------------------------------
+* ----- Widget search --------
+-----------------------------------*/
+.widget_search{
+    background-color: #f5f5f5;
+}
+.widget_search .screen-reader-text{
+	display: none;
+}
+.widget_search form,
+form {
+	position:relative;	
+}
+.widget_search .search-field,
+.widget_search input[type=text]{
+    width:227px;
+	max-width: calc( 100% - 40px );
+	display:block;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 33px;
+    padding: 0 12px;
+    border: 1px solid #dedede;
+	font-weight:normal;
+}
+.widget_search .search-submit,
+#primary .search-form .search-submit{
+    margin-top: 0;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0 33px 33px 0;
+    text-transform: capitalize!important;
+    cursor: pointer;
+    padding: 0 13px;
+    border:none;
+	background:#009bdb;
+	color:#FFF;
+}
+.posts-navigation{
+	margin-top:20px;
+	margin-bottom:20px;	
+}
+
+label,
+legend,
+code,
+blockquote,
+input,
+textarea,
+button,
+label,
+legend {
+	font-family:'Raleway', sans-serif;
+}
+body.single .box-item{
+	text-align:left;	
+}
+.box-item ul{
+	display:block;
+	margin:0px;
+	padding:0px;	
+	list-style:disc!important;
+	margin-left:20px;
+	line-height: 20px;
+}
+.box-item li{
+	padding-bottom:10px;
+}
+
+/* Remove bottom on embeds that wrapped in paragraphs via wpautop. */
+
+p > embed:only-child,
+p > iframe:only-child,
+p > object:only-child {
+	margin-bottom: 0;
+}
+
+.wp-caption,
+.gallery-caption {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+	border: 1px solid #333;
+	padding: 2px;
+}
+ul.simply-list-style{
+	display:block;
+	margin:0px;
+	padding:0px;
+	list-style:none;	
+}
+ul.simply-list-style li{
+	list-style:none;
+	line-height:25px;
+	padding-left:25px;
+	position:relative;
+	padding-bottom:4px;
+}
+ul.simply-list-style li:after{
+	content: "\f0a4";
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 14px;
+	font-size: inherit;
+	text-rendering: auto;
+	position:absolute;
+	left:0px;
+	top:4px;
+	color:#0cb1f6;
+}
+.my-vcard-services .col{
+	padding:5px;	
+}
+.kc-contact-form7 input[type=submit]{
+	height:40px;
+}
+
+.posts-share-icon ul{
+	margin:0px;
+	padding:0px;	
+}
+.posts-share-icon{
+    clear: both;
+    display: -moz-inline-box;
+    overflow: hidden;
+	margin-bottom:40px;
+}
+.posts-share-icon h5 {
+    color: #252525;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 34px;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;
+}
+.posts-share-icon li {
+    border-left: 1px solid #e5e5e5;
+    float: left;
+    line-height: 34px;
+	list-style:none;
+}
+.posts-share-icon ul li:first-child {
+    border: medium none;
+}
+.posts-share-icon ul li a {
+    color: #666666;
+    display: inline-block;
+    font-size: 22px;
+    line-height: 34px;
+    padding: 0 25px;
+    text-align: center;
+}
+.posts-share-icon ul li:last-child a {
+    padding-right: 0
+}
+.posts-share-icon ul li a i {
+    font-size: 20px
+}
+
+.posts-share-icon ul li a.facebook:hover {color: #3b579d}
+.posts-share-icon ul li a.twitter:hover {color: #3acaff}
+.posts-share-icon ul li a.pinterest:hover {color: #ce2027}
+.posts-share-icon ul li a.google-plus:hover {color: #d11717}
+.posts-share-icon .share-icon ul li a.linkedin:hover {color: #0097bd}
+.content.blog-single{ margin-bottom:30px;}
+
+/* calendar widget */
+.widget_calendar {width: 100%;}
+#wp-calendar {width: 100%; }
+#wp-calendar caption { text-align: right; color: #333; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th { padding-bottom: 10px;text-align: center; }
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+
+
+/*==========================================================
+# Tag
+===========================================================*/ 
+.tagcloud {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tagcloud {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+	padding: 0;
+}
+.tagcloud a {
+	display: inline-block;
+	line-height: 28px;
+	padding: 5px 8px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #333;
+	font-size: 14px !important;
+	text-decoration: none;
+	-webkit-transition: .2s;
+	transition: .2s;
+	font-weight: normal;
+}
+.tagcloud a .tag-link-count {
+	padding: 3px 4px 3px 2px;
+	line-height: 22px;
+	margin-left: 6px;
+	background-color: #009bdb;
+	-webkit-border-radius: 22%;
+	-moz-border-radius: 22%;
+	border-radius: 22%;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+.tagcloud a:hover {
+	background-color: #3498db;
+	border: 1px solid #3498db;
+	color: #fff;
+}
+.tagcloud a:hover .tag-link-count {
+	background-color: #fff;
+	color: #3498db;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  right: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
